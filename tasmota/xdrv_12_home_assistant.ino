@@ -485,7 +485,7 @@ void HAssAnnounceRelayLight(void)
           }
 
           GetPowerDevice(value_template, i, sizeof(value_template), Settings.flag.device_index_enable); // SetOption26 - Switch between POWER or POWER1
-          GetTopic_P(command_topic, CMND, TasmotaGlobal.mqtt_topic, value_template);
+          GetTopic_P(command_topic, CMND, TasmotaGlobal.mqtt_topic, "EVENT");
           GetTopic_P(state_topic, TELE, TasmotaGlobal.mqtt_topic, D_RSLT_STATE);
           GetTopic_P(availability_topic, TELE, TasmotaGlobal.mqtt_topic, S_LWT);
           Response_P(HASS_DISCOVER_BASE, name, state_topic);
